@@ -11,18 +11,69 @@ let bookId = ['smarter_way_to_learn_Java_Script',
     'learning_javascript_design_pattern'
 ];
 //  Q 4- object containing information for each book {ID, title, language and author}.
-let bookInfo = [
-    { title: 'smarter way to learn Java Script', language: 'english', author: 'Mark Myers', id: 'smarter_way_to_learn_Java_Script' },
-    { title: 'introduction to algorithms', language: 'english', author: 'tony hoare', id: 'introduction_to_algorithms' },
-    { title: 'head first javascript', language: 'english', author: 'Michael Morrison', id: 'head_first_javascript' },
-    { title: 'eloquent javascript', language: 'english', author: 'Rebecca M. Riordan', id: 'eloquent_javascript' },
-    { title: 'head first mobile web', language: 'english', author: 'Ryan Benedetti, Ronan Cranley', id: 'head_first_mobile_web' },
-    { title: 'javascript the good part', language: 'english', author: 'Douglas Crockford', id: 'javascript_the_good_part' },
-    { title: 'learning javascript', language: 'english', author: 'Tim Wright', id: 'learning_javascript' },
-    { title: 'javascript testing', language: 'english', author: 'Yuxian Eugene Liang', id: 'javascript_testing' },
-    { title: 'object oriented javascript', language: 'english', author: 'Stoyan Stefanov', id: 'object_oriented_javascript' },
-    { title: 'learning javascript design pattern', language: 'english', author: 'Addy Osmani', id: 'learning_javascript_design_pattern' }
-];
+let bookInfo = {
+smarter_way_to_learn_Java_Script: {
+            title: 'smarter way to learn Java Script',
+            language: 'english',
+            author: 'Mark Myers',
+            id: 'smarter_way_to_learn_Java_Script'
+        },
+introduction_to_algorithms: {
+            title: 'introduction to algorithms',
+            language: 'english',
+            author: 'tony hoare',
+            id: 'introduction_to_algorithms'
+        },
+head_first_javascript: {
+            title: 'head first javascript',
+            language: 'english',
+            author: 'Michael Morrison',
+            id: 'head_first_javascript'
+        },
+eloquent_javascript: {
+            title: 'eloquent javascript',
+            language: 'english',
+            author: 'Rebecca M. Riordan',
+            id: 'eloquent_javascript'
+        },
+head_first_mobile_web: {
+            title: 'head first mobile web',
+            language: 'english',
+            author: 'Ryan Benedetti, Ronan Cranley',
+            id: 'head_first_mobile_web'
+        },
+javascript_the_good_part: {
+            title: 'javascript the good part',
+            language: 'english',
+            author: 'Douglas Crockford',
+            id: 'javascript_the_good_part'
+        },
+learning_javascript: {
+            title: 'learning javascript',
+            language: 'english',
+            author: 'Tim Wright',
+            id: 'learning_javascript'
+        },
+javascript_testing: {
+            title: 'javascript testing',
+            language: 'english',
+            author: 'Yuxian Eugene Liang',
+            id: 'javascript_testing'
+        },
+object_oriented_javascript: {
+            title: 'object oriented javascript',
+            language: 'english',
+            author: 'Stoyan Stefanov',
+            id: 'object_oriented_javascript'
+        },
+learning_javascript_design_pattern: {
+            title: 'learning javascript design pattern',
+            language: 'english',
+            author: 'Addy Osmani',
+            id: 'learning_javascript_design_pattern'
+        }
+};
+    
 // 
 let bookImg = {
     smarter_way_to_learn_Java_Script: 'img/smarter_way_to_learn_Java_Script.jpg',
@@ -60,11 +111,11 @@ function giveMeUl() {
     let ul = document.createElement('ul');
     ul.setAttribute('id', "listOfBook");
 
-    for (let i = 0; i < bookInfo.length; i++) {
-        const id = bookInfo[i].id;
-        const title = bookInfo[i].title;
-        const language = bookInfo[i].language;
-        const author = bookInfo[i].author;
+    for (let i = 0; i < bookId.length; i++) {
+        const id = bookId[i];
+        const title = bookInfo[id].title;
+        const language = bookInfo[id].language;
+        const author = bookInfo[id].author;
         // create HTML element
         const li = document.createElement('li');
         const h1 = document.createElement('h1');
