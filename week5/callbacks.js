@@ -11,9 +11,9 @@ function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
             threeCallback();
             fiveCallback();
         }else if (range[x] % 5 === 0) {
-          return  fiveCallback();
+            fiveCallback();
         }else if (range[x] % 3 === 0) {
-            return threeCallback();
+            threeCallback();
         }
 
     }
