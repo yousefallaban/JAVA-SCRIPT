@@ -14,7 +14,7 @@ favoriteAnimals.splice(3, 1);
 console.log(favoriteAnimals);
 // find a position or the index of the item in the array
 const indexOfItem = favoriteAnimals.indexOf('meerkats');
-if (indexOfItem == true) {
+if (indexOfItem === -1) {
     console.log('The item you are looking for is at index: ' + indexOfItem);
 } else { 
     console.log("The item you are looking for it's not exist");
